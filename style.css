@@ -5,3 +5,11 @@ Description: Bootstrap 4 Blog template for my site.
 Version: 0.0.1
 Tags: bootstrap
 */
+
+/* BOOTSTRAP */
+
+.bg-dark { background-color: #1B2024 !important; }
+
+.btn, .form-control { border-radius: 0; }
+
+/* END OF BOOTSTRAP */
