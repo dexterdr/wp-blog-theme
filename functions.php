@@ -24,6 +24,30 @@ add_filter('style_loader_tag', function ($tag, $handle) {
     return str_replace(" id='$handle-css' ", '', $tag);
 }, 10, 2);
 
+add_filter('next_posts_link_attributes', function() {
+    return 'class="btn btn-outline-secondary btn-block"';
+});
+
+function cosmology_load_posts() {
+    $args = unserialize(stripslashes($_POST['query']));
+    $args['paged'] = $_POST['page'] + 1;
+    $args['post_status'] = 'publish';
+
+    query_posts($args);
+
+    if (have_posts()) {
+        while(have_posts()) {
+            the_post();
+            get_template_part('content', get_post_format());
+        }
+    }
+
+    die();
+}
+
+add_action('wp_ajax_loadmore', 'cosmology_load_posts');
+add_action('wp_ajax_nopriv_loadmore', 'cosmology_load_posts');
+
 // remove_action('wp_head', 'wp_resource_hints', 2);
 remove_action('wp_head', 'rsd_link');
 remove_action('wp_head', 'wlwmanifest_link');

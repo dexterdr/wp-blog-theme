@@ -1,26 +1,18 @@
 <?php get_header(); ?>
 
-<div class="row">
-    <section class="col-sm-8">
-        <?php
-        if (have_posts()) {
-            while (have_posts()) {
-                the_post();
-                get_template_part('content', get_post_format());
-            }
+<?php if (have_posts()) { ?>
+    <main class="card-columns">
+        <?php while (have_posts()) {
+            the_post();
+            get_template_part('content', get_post_format());
+        } ?>
+    </main>
 
-            if (!is_single() && !is_page()) { ?>
-                Navigation:
-                <nav class="text-center">
-                    <?php posts_nav_link(' &mdash; ',
-                                         '&laquo; следующие новости',
-                                         'предыдущие новости &raquo;'); ?>
-                </nav>
-            <?php }
-        }
-        ?>
-    </section>
-    <?php get_sidebar(); ?>
-</div>
+    <?php if ($next = get_next_posts_link('Загрузить еще', 0)) { ?>
+        <nav class="mb-3 next">
+            <?php echo $next; ?>
+        </nav>
+    <?php }
+} ?>
 
 <?php get_footer(); ?>

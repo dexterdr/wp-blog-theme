@@ -8,8 +8,157 @@ Tags: bootstrap
 
 /* BOOTSTRAP */
 
-.bg-dark { background-color: #1B2024 !important; }
+.btn, .form-control {
+    border-radius: 0;
+    box-shadow: none !important;
+    outline: none !important;
+}
 
-.btn, .form-control { border-radius: 0; }
+.btn-outline-secondary {
+    border-color: #8899a6;
+    color: #8899a6;
+}
+
+.btn-outline-secondary:hover {
+    color: #8899a6;
+    background-color: #243447;
+    border-color: #8899a6;
+}
+
+.row {
+    margin-right: -0.5rem;
+    margin-left: -0.5rem;
+}
+
+.row.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
+.col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
+.col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
+.col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
+.col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
+.col-xl-auto {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.card {
+    border: none;
+    border-radius: 0;
+}
+
+.card-img-top {
+    border-radius: 0;
+    height: auto;
+}
+
+.card-columns { column-gap: 1rem; }
 
 /* END OF BOOTSTRAP */
+
+body {
+    background-color: #000;
+    color: #333;
+    font-family: 'PT Sans', sans-serif;
+}
+
+a { color: #3366cc; }
+
+.navbar-dark {
+    color: #fff;
+    background-color: #243447;
+}
+
+.navbar-brand img { vertical-align: top; }
+.navbar-dark .navbar-nav .nav-link, .navbar-dark a { color: #8899a6; }
+
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .snet a:focus,
+.navbar-dark a:focus,
+.navbar-dark a:hover {
+    color: #ffd78a;
+    text-decoration: underline;
+}
+
+.navbar-dark .navbar-toggler {
+    border-radius: 0;
+    border-color: #ffd78a;
+    color: #ffd78a;
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 215, 138)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+#search { min-width: 230px; }
+#search .form-control { border-color: #ffd78a; }
+
+#search .btn {
+    background-color: #ffd78a;
+    border-color: #ffd78a;
+}
+
+#search .btn:hover svg, #search .btn:focus svg { fill: #000 !important; }
+
+#search svg {
+    height: 20px;
+    fill: #243447;
+    float: left;
+    width: 20px;
+}
+
+.snet { padding: 0; }
+
+.snet a {
+    display: inline-block;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+}
+
+.snet svg {
+    fill: #ffd78a;
+    height: 30px;
+    vertical-align: middle;
+    width: 30px;
+}
+
+article .card-footer svg {
+    fill: #333;
+    float: left;
+    height: 20px;
+    margin-right: 0.5rem;
+    position: relative;
+    width: 20px;
+}
+
+h6.card-subtitle, .card-footer { font-size: 0.875rem; }
+.card .content p:last-child { margin-bottom: 0; }
+.card p { margin-bottom: 10px; }
+main .card { margin-bottom: 1rem; }
+
+.card .card-footer {
+    border-radius: 0 !important;
+    border-top-width: 2px;
+}
+
+.container > footer { padding: 1rem; }
+
+@media (max-width: 767px) {
+    .card-columns { column-count: 1 !important; }
+}
+
+@media (max-width: 991px) {
+    .navbar-brand, .snet a:last-child { margin-right: 0; }
+
+    .snet a {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+    }
+
+    .card-columns { column-count: 2; }
+}
