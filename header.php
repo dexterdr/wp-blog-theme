@@ -19,16 +19,17 @@
 </head>
 <body <?php body_class(); ?>>
 
-<div class="container">
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark mb-3">
-        <a class="navbar-brand" href="/">
-            <img src="<?php echo get_theme_file_uri('/images/logo.svg'); ?>" height="30">
-            &nbsp;λογία
-        </a>
+<header class="top d-none d-lg-block">
+    <a href="/"><img src="<?php echo get_theme_file_uri('images/logo.png'); ?>"></a>
+</header>
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark mb-3">
+    <div class="container">
+        <a href="/" class="navbar-brand d-lg-none">COSMOLOGY.PRO</a>
 
         <form action="http://www.google.com" class="form-inline d-none d-sm-flex order-lg-3" id="search" method="GET" target="_blank">
             <div class="input-group">
-                <input type="hidden" name="cx" value="015482176942469738949:edc_azamkjc">
+                <input type="hidden" name="cx" value="015482176942469738949:e57b9q-jfso">
                 <input type="hidden" name="ie" value="UTF-8">
                 <input type="text" name="q" class="form-control" placeholder="Поиск...">
                 <span class="input-group-btn">
@@ -45,6 +46,12 @@
 
         <div class="collapse navbar-collapse order-lg-1 mt-2 mt-lg-0" id="mainmenu">
             <ul class="navbar-nav mr-auto">
+                <li class="nav-item nav-home">
+                    <a href="/" class="nav-link">Главная</a>
+                </li>
+                <li class="nav-item d-sm-none">
+                    <a href="https://cse.google.ru/cse/publicurl?cx=015482176942469738949:edc_azamkjc" class="nav-link" target="_blank">Поиск</a>
+                </li>
                 <?php
                     $categories = wp_list_categories([
                         'echo' => false,
@@ -59,9 +66,6 @@
                     $categories = str_replace('href="', 'class="nav-link" href="', $categories);
                     echo $categories;
                 ?>
-                <li class="nav-item d-sm-none">
-                    <a href="https://cse.google.ru/cse/publicurl?cx=015482176942469738949:edc_azamkjc" class="nav-link" target="_blank">Поиск</a>
-                </li>
             </ul>
 
             <div class="col-auto snet order-lg-2">
@@ -69,4 +73,7 @@
                 --><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M17 1H3c-1.1 0-2 .9-2 2v14c0 1.101.9 2 2 2h7v-7H8V9.525h2v-2.05c0-2.164 1.212-3.684 3.766-3.684l1.803.002v2.605h-1.197c-.994 0-1.372.746-1.372 1.438v1.69h2.568L15 12h-2v7h4c1.1 0 2-.899 2-2V3c0-1.1-.9-2-2-2z"/></svg></a>
             </div>
         </div>
-    </nav>
+    </div>
+</nav>
+
+<div class="container">

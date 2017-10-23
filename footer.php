@@ -9,7 +9,6 @@
     </footer>
 </div><!-- /.container -->
 
-<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
 <?php wp_footer(); ?>
 
 <script>

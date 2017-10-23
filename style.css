@@ -6,24 +6,27 @@ Version: 0.0.1
 Tags: bootstrap
 */
 
+body {
+    background-color: #181b20;
+    color: #333;
+    font-family: 'PT Sans', sans-serif;
+}
+
+header.top {
+    background-color: #000;
+    background-image: url('images/header.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.container > footer { padding: 1rem; }
+
 /* BOOTSTRAP */
 
-.btn, .form-control {
-    border-radius: 0;
-    box-shadow: none !important;
-    outline: none !important;
-}
-
-.btn-outline-secondary {
-    border-color: #8899a6;
-    color: #8899a6;
-}
-
-.btn-outline-secondary:hover {
-    color: #8899a6;
-    background-color: #243447;
-    border-color: #8899a6;
-}
+.text-muted { color: #999 !important; }
 
 .row {
     margin-right: -0.5rem;
@@ -45,6 +48,23 @@ Tags: bootstrap
   padding-left: 0.5rem;
 }
 
+.btn, .form-control {
+    border-radius: 0;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.btn-outline-secondary {
+    border-color: #ddd;
+    color: #ddd;
+}
+
+.btn-outline-secondary:hover {
+    color: #243447;
+    background-color: #ddd;
+    border-color: #243447;
+}
+
 .card {
     border: none;
     border-radius: 0;
@@ -59,56 +79,74 @@ Tags: bootstrap
 
 /* END OF BOOTSTRAP */
 
-body {
-    background-color: #000;
-    color: #333;
-    font-family: 'PT Sans', sans-serif;
-}
+/* LINKS */
 
 a { color: #3366cc; }
+
+.widget ol li a,
+.card-footer a {
+    color: #000;
+    font-weight: normal;
+}
+
+/* END OF LINKS */
+
+/* NAVBAR */
 
 .navbar-dark {
     color: #fff;
     background-color: #243447;
 }
 
-.navbar-brand img { vertical-align: top; }
-.navbar-dark .navbar-nav .nav-link, .navbar-dark a { color: #8899a6; }
+.navbar-dark .navbar-brand {
+    color: #ddd !important;
+    text-decoration: none !important;
+}
 
-.navbar-dark .navbar-nav .nav-link:focus,
-.navbar-dark .navbar-nav .nav-link:hover,
-.navbar-dark .snet a:focus,
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark a {
+    color: #ddd;
+    font-weight: bold;
+}
+
 .navbar-dark a:focus,
 .navbar-dark a:hover {
-    color: #ffd78a;
     text-decoration: underline;
 }
 
 .navbar-dark .navbar-toggler {
     border-radius: 0;
-    border-color: #ffd78a;
-    color: #ffd78a;
+    border-color: #ddd;
+    color: #ddd;
 }
 
 .navbar-dark .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 215, 138)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(221, 221, 221, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
-#search { min-width: 230px; }
-#search .form-control { border-color: #ffd78a; }
+#search { width: 250px; }
+#search .form-control { border-color: #ddd; }
 
 #search .btn {
-    background-color: #ffd78a;
-    border-color: #ffd78a;
+    background-color: #ddd;
+    border-color: #ddd;
 }
 
-#search .btn:hover svg, #search .btn:focus svg { fill: #000 !important; }
+#search .btn:focus,
+#search .btn:hover {
+    background-color: #243447;
+}
 
 #search svg {
     height: 20px;
     fill: #243447;
     float: left;
     width: 20px;
+}
+
+#search .btn:focus svg,
+#search .btn:hover svg {
+    fill: #ddd;
 }
 
 .snet { padding: 0; }
@@ -121,19 +159,36 @@ a { color: #3366cc; }
 }
 
 .snet svg {
-    fill: #ffd78a;
+    fill: #ddd;
     height: 30px;
     vertical-align: middle;
     width: 30px;
 }
 
-article .card-footer svg {
-    fill: #333;
-    float: left;
-    height: 20px;
-    margin-right: 0.5rem;
-    position: relative;
-    width: 20px;
+/* END OF NAVBAR */
+
+/* CARDS & WIDGETS */
+
+.illustration {
+    border: 1px solid #ddd;
+    margin: 15px 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.illustration img { margin-bottom: 10px; }
+
+.blockquote {
+    border-left: 5px solid #ddd;
+    margin: 15px 0;
+    padding: 10px 20px;
+}
+
+.blockquote p { font-style: italic; }
+
+.blockquote footer {
+    color: #999;
+    text-align: right;
 }
 
 h6.card-subtitle, .card-footer { font-size: 0.875rem; }
@@ -143,16 +198,62 @@ main .card { margin-bottom: 1rem; }
 
 .card .card-footer {
     border-radius: 0 !important;
-    border-top-width: 2px;
+    border-top: 2px solid #ddd;
 }
 
-.container > footer { padding: 1rem; }
+.card-footer svg {
+    fill: #3366cc;
+    float: left;
+    height: 20px;
+    margin-right: 0.5rem;
+    position: relative;
+    width: 20px;
+}
+
+.widget ol {
+    color: #3366cc;
+    font-weight: bold;
+    margin-bottom: 0;
+    padding-left: 1rem;
+}
+
+.widget ol li {
+    border-bottom: 1px dotted #333;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.widget ol li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.tw-frame iframe {
+    background-color: #fff;
+    margin-bottom: -7px !important;
+}
+
+/* CARDS & WIDGETS */
+
+/* MEDIA */
+
+@media (max-width: 575px) {
+    .navbar-expand-lg > .container { padding: 0 !important; }
+}
 
 @media (max-width: 767px) {
     .card-columns { column-count: 1 !important; }
 }
 
 @media (max-width: 991px) {
+    .navbar-expand-lg > .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .navbar-expand-lg .nav-link { display: inline-block; }
+    .navbar .nav-home { display: none; }
     .navbar-brand, .snet a:last-child { margin-right: 0; }
 
     .snet a {
@@ -162,3 +263,17 @@ main .card { margin-bottom: 1rem; }
 
     .card-columns { column-count: 2; }
 }
+
+@media (min-width: 992px) {
+    .navbar-dark .nav-item { margin-right: 0.5rem; }
+    .navbar-dark .nav-item:last-child { margin-right: 0; }
+
+    .navbar-dark .navbar-nav .nav-link:focus,
+    .navbar-dark .navbar-nav .nav-link:hover {
+        background-color: #ddd;
+        color: #243447;
+        text-decoration: none;
+    }
+}
+
+/* END OF MEDIA */
