@@ -178,6 +178,22 @@ a { color: #3366cc; }
 
 .illustration img { margin-bottom: 10px; }
 
+.video {
+    height: 0;
+    margin: 15px 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+
+.video iframe, .video object, .video embed {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
 .blockquote {
     border-left: 5px solid #ddd;
     margin: 15px 0;
@@ -191,6 +207,7 @@ a { color: #3366cc; }
     text-align: right;
 }
 
+.card h1.subtitle { font-size: 1.5rem; }
 h6.card-subtitle, .card-footer { font-size: 0.875rem; }
 .card .content p:last-child { margin-bottom: 0; }
 .card p { margin-bottom: 10px; }

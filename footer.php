@@ -11,6 +11,11 @@
 
 <?php wp_footer(); ?>
 
+
+<?php if (is_single()) { ?>
+    <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=59f5ac5430317e001239282e&product=inline-share-buttons' async='async'></script>
+<?php } ?>
+
 <script>
     $(document).ready(function() {
         $('nav.next a.btn').click(function(event) {

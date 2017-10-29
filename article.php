@@ -1,8 +1,5 @@
 <div class="card">
     <article id="post-<?php the_ID(); ?>">
-        <?php /* if (has_post_thumbnail()) {
-            the_post_thumbnail('large', ['class' => 'card-img-top']);
-        } */ ?>
         <div class="card-body">
             <header>
                 <?php the_title('<h1 class="card-title">', '</h1>'); ?>
@@ -17,6 +14,7 @@
                 <?php the_content(); ?>
             </div>
 
+            <div class="sharethis-inline-share-buttons mt-3"></div>
         </div>
 
         <?php $tags = get_the_tag_list('', ', '); ?>

@@ -1,5 +1,16 @@
 <?php get_header(); ?>
 
+<?php if (is_category()) { ?>
+    <?php $category_description = category_description(); ?>
+    <?php if ($category_description) { ?>
+        <section class="card mb-3">
+            <div class="card-body content">
+                <?php echo $category_description; ?>
+            </div>
+        </section>
+    <?php } ?>
+<?php } ?>
+
 <?php if (have_posts()) { ?>
     <main class="card-columns">
         <?php while (have_posts()) {

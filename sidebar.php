@@ -22,10 +22,10 @@
             <div class="card tw-frame">
                 <div class="card-body">
                     <h4 class="card-title">Посты в Twitter</h4>
-                        <a class="twitter-timeline" href="https://twitter.com/dexterdr" data-widget-id="261198151581569024" rel="nofollow"></a>
-                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                    </div>
+                    <a class="twitter-timeline" href="https://twitter.com/dexterdr" data-widget-id="261198151581569024" rel="nofollow"></a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
                 </div>
+            </div>
         </div>
     </div>
 </aside>
