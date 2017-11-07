@@ -59,10 +59,23 @@ header.top {
     color: #ddd;
 }
 
-.btn-outline-secondary:hover {
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
     color: #243447;
     background-color: #ddd;
     border-color: #243447;
+}
+
+.btn-outline-primary {
+    border-color: #3366cc;
+    color: #3366cc;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+    color: #fff;
+    background-color: #3366cc;
+    border-color: #3366cc;
 }
 
 .card {
@@ -246,6 +259,7 @@ main .card { margin-bottom: 1rem; }
     padding-bottom: 0;
 }
 
+#disqus_thread iframe,
 .tw-frame iframe {
     background-color: #fff;
     margin-bottom: -7px !important;

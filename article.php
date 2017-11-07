@@ -14,7 +14,17 @@
                 <?php the_content(); ?>
             </div>
 
-            <div class="sharethis-inline-share-buttons mt-3"></div>
+            <?php if (is_single()) { ?>
+                <div class="sharethis-inline-share-buttons my-3"></div>
+                <div id="disqus_thread"></div>
+
+                <script>
+                    var disqus_config = function () {
+                        this.page.url = window.location.toString();
+                        this.page.identifier = <?php echo get_the_ID(); ?>;
+                    };
+                </script>
+            <?php } ?>
         </div>
 
         <?php $tags = get_the_tag_list('', ', '); ?>
