@@ -22,6 +22,12 @@ function cosmology_scripts()
 
 add_action('wp_enqueue_scripts', 'cosmology_scripts');
 
+add_filter('wp_calculate_image_srcset_meta', '__return_null');
+
+add_filter('post_thumbnail_html', function ($html) {
+    return preg_replace('/(width|height)="\d+"\s/', "", $html);
+});
+
 add_filter('style_loader_tag', function ($tag, $handle) {
     return str_replace(" id='$handle-css' ", '', $tag);
 }, 10, 2);
