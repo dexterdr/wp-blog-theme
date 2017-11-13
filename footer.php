@@ -37,53 +37,6 @@
             }
         });
     </script>
-<?php } else if (is_category() || is_front_page() || is_home() || is_tag()) { ?>
-    <script>
-        $(document).ready(function() {
-            $('nav.next a.btn').click(function(event) {
-                event.preventDefault();
-                if ($('body').hasClass('loading')) { return false; }
-
-                var data = {
-                    'action': 'loadmore',
-                    'query': true_posts,
-                    'page' : current_page
-                };
-
-                $.ajax({
-                    url: ajaxurl,
-                    data: data,
-                    type: 'POST',
-                    beforeSend: function(xhr) {
-                        $(this).text('Загружаю...');
-                        $('body').addClass('loading');
-                    },
-                    success: function(data) {
-                        $('body').removeClass('loading');
-                        if (data) {
-                            $('nav.next a.btn').text('Загрузить ещё');
-                            $('main.card-columns').append(data);
-                            current_page++;
-                            if (current_page == max_pages) {
-                                $('nav.next').remove();
-                            }
-                        } else {
-                            $('nav.next').remove();
-                        }
-                    }
-                });
-            });
-
-            $(window).scroll(function() {
-                var offset = 500;
-
-                if ($(document).scrollTop() > ($(document).height() - $(window).height() - offset)
-                    && $('nav.next').length && !$('body').hasClass('loading')) {
-                    $('nav.next a.btn').trigger('click');
-                }
-            });
-        });
-    </script>
 <?php } ?>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->

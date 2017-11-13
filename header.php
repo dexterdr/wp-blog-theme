@@ -8,19 +8,11 @@
 <meta name="contact" content="dexter.gm@gmail.com">
 <link rel="icon" href="../../favicon.ico">
 <?php wp_head(); ?>
-<?php if ($wp_query->max_num_pages > 1) { ?>
-<script>
-    var ajaxurl = '<?php echo site_url(); ?>/wp-admin/admin-ajax.php';
-    var true_posts = '<?php echo serialize($wp_query->query_vars); ?>';
-    var current_page = <?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>;
-    var max_pages = '<?php echo $wp_query->max_num_pages; ?>';
-</script>
-<?php } ?>
 </head>
 <body <?php body_class(); ?>>
 
 <header class="top d-none d-lg-block">
-    <a href="/"><img src="<?php echo get_theme_file_uri('images/logo.png'); ?>"></a>
+    <a href="/"><img src="<?php echo get_theme_file_uri('images/logo.png'); ?>" alt="Космология"></a>
 </header>
 
 <nav class="navbar sticky-top navbar-expand-lg navbar-dark mb-3">

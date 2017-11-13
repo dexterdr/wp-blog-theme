@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
-<?php if (is_category()) { ?>
+<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
+<?php if (is_category() && $paged == 1) { ?>
     <?php $category_description = category_description(); ?>
     <?php if ($category_description) { ?>
         <section class="card mb-3">
@@ -19,9 +20,18 @@
         } ?>
     </main>
 
-    <?php if ($next = get_next_posts_link('Загрузить еще', 0)) { ?>
-        <nav class="mb-3 next">
-            <?php echo $next; ?>
+    <?php $next = get_next_posts_link('Предыдущие <span class="d-none d-sm-inline">' .
+                                      'записи</span> &rarr;'); ?>
+    <?php $prev = get_previous_posts_link('&larr; Следующие <span class="d-none d-sm-inline"> ' .
+                                          'записи</span>'); ?>
+    <?php if ($next || $prev) { ?>
+        <nav class="justify-content-between mb-3 row">
+            <?php if ($prev) { ?>
+                <div class="col"><?php echo $prev; ?></div>
+            <?php } ?>
+            <?php if ($next) { ?>
+                <div class="col text-right"><?php echo $next; ?></div>
+            <?php } ?>
         </nav>
     <?php }
 } ?>
