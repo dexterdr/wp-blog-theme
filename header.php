@@ -8,6 +8,8 @@
 <meta name="contact" content="dexter.gm@gmail.com">
 <link rel="icon" href="../../favicon.ico">
 <?php wp_head(); ?>
+<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic"
+      rel="stylesheet" lazyload>
 </head>
 <body <?php body_class(); ?>>
 
