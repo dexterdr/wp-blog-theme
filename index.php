@@ -13,11 +13,14 @@
 <?php } ?>
 
 <?php if (have_posts()) { ?>
-    <main class="card-columns">
-        <?php while (have_posts()) {
-            the_post();
-            get_template_part('content', get_post_format());
-        } ?>
+    <main class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": ".grid-sizer", "percentPosition": true }'>
+        <div class="grid-sizer col-md-6 col-lg-4"></div>
+        <?php while (have_posts()) { ?>
+            <div class="grid-item col-md-6 col-lg-4">
+                <?php the_post();
+                get_template_part('content', get_post_format()); ?>
+            </div>
+        <?php } ?>
     </main>
 
     <?php $next = get_next_posts_link('Предыдущие <span class="d-none d-sm-inline">' .
