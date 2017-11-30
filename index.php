@@ -13,8 +13,7 @@
 <?php } ?>
 
 <?php if (have_posts()) { ?>
-    <main class="grid row" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": ".grid-sizer", "percentPosition": true }'>
-        <div class="grid-sizer col-md-6 col-lg-4"></div>
+    <main class="grid row">
         <?php while (have_posts()) { ?>
             <div class="grid-item col-md-6 col-lg-4">
                 <?php the_post();

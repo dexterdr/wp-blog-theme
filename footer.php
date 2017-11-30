@@ -37,6 +37,15 @@
             }
         });
     </script>
+<?php } else { ?>
+    <script>
+        $(window).on('load', function() {
+            $('.grid').masonry({
+                'itemSelector': '.grid-item',
+                'percentPosition': true
+            });
+        });
+    </script>
 <?php } ?>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
