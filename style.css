@@ -271,8 +271,7 @@ main .card { margin-bottom: 1rem; }
     .navbar-expand-lg > .container { padding: 0 !important; }
 }
 
-@media (max-width: 767px) {
-}
+@media (max-width: 767px) { }
 
 @media (max-width: 991px) {
     .navbar-expand-lg > .container {
