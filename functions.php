@@ -11,7 +11,7 @@ add_action('after_setup_theme', 'cosmology_setup');
 function cosmology_scripts()
 {
     wp_enqueue_style('pt-font', 'https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic', [], null, 'all');
-    wp_enqueue_style('bootstrap', get_theme_file_uri('/css/bootstrap.min.css'), [], null, 'all');
+    // wp_enqueue_style('bootstrap', get_theme_file_uri('/css/bootstrap.min.css'), [], null, 'all');
     wp_enqueue_style('cosmology', get_stylesheet_uri(), [], null, 'all');
 
     // wp_enqueue_script('jquery3', get_theme_file_uri('/js/jquery-3.2.1.min.js'), [], null, true);
