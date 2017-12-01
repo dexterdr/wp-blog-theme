@@ -307,11 +307,11 @@ main .card { margin-bottom: 1rem; }
         column-rule: 2px solid #ddd;
     }
 
-    .category-description p {
+    /* .category-description p {
         -webkit-column-break-inside: avoid;
         break-inside: avoid;
         page-break-inside: avoid;
-    }
+    } */
 }
 
 /* END OF MEDIA */
