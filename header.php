@@ -12,7 +12,10 @@
 <body <?php body_class(); ?>>
 
 <header class="top d-none d-lg-block">
-    <a href="/"><img src="<?php echo get_theme_file_uri('images/logo.png'); ?>" alt="Космология"></a>
+    <a href="/">
+        <img src="<?php echo get_theme_file_uri('images/logo.png'); ?>"
+             alt="Космология" width="417px" height="44px">
+    </a>
 </header>
 
 <nav class="navbar sticky-top navbar-expand-lg navbar-dark mb-3">
