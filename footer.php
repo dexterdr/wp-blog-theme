@@ -42,20 +42,19 @@
         $(window).on('load', function() {
             $('.grid').masonry({
                 'itemSelector': '.grid-item',
+                'gutter': 0,
                 'percentPosition': true
             });
         });
     </script>
 <?php } ?>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108904791-1"></script>
 <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'UA-108904791-1');
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-108904791-1', 'auto');
+ga('send', 'pageview');
 </script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 </body>
 </html>

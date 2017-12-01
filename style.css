@@ -88,9 +88,6 @@ header.top {
     height: auto;
 }
 
-.card-columns { column-gap: 1rem; }
-.card-columns .card { margin-bottom: 1rem; }
-
 /* END OF BOOTSTRAP */
 
 /* LINKS */
@@ -275,7 +272,6 @@ main .card { margin-bottom: 1rem; }
 }
 
 @media (max-width: 767px) {
-    .card-columns { column-count: 1 !important; }
 }
 
 @media (max-width: 991px) {
@@ -292,8 +288,6 @@ main .card { margin-bottom: 1rem; }
         padding-top: .5rem;
         padding-bottom: .5rem;
     }
-
-    .card-columns { column-count: 2; }
 }
 
 @media (min-width: 992px) {
