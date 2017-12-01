@@ -18,7 +18,7 @@ function cosmology_scripts()
     // wp_enqueue_script('popper', get_theme_file_uri('/js/popper.min.js'), [], null, true);
     // wp_enqueue_script('bootstrap', get_theme_file_uri('/js/bootstrap.min.js'), [], null, true);
     // wp_enqueue_script('masonry4', get_theme_file_uri('/js/masonry.min.js'), [], null, true);
-    wp_enqueue_script('app', get_theme_file_uri('/app.min.js'), [], null, true);
+    wp_enqueue_script('app', get_theme_file_uri('/app.js'), [], null, true);
 }
 
 add_action('wp_enqueue_scripts', 'cosmology_scripts');

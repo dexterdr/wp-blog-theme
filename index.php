@@ -5,7 +5,7 @@
     <?php $category_description = category_description(); ?>
     <?php if ($category_description) { ?>
         <section class="card mb-3">
-            <div class="card-body content">
+            <div class="card-body category-description content">
                 <?php echo $category_description; ?>
             </div>
         </section>
