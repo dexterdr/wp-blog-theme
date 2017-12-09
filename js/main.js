@@ -15,6 +15,14 @@ function loadDisqus() {
 }
 
 $(document).ready(function() {
+    $('[data-toggle="popover"]').click(function() {
+        $(this).popover('toggle');
+    }).blur(function() {
+        $(this).popover('hide');
+    });
+
+    // $('[data-toggle="popover"]').popover();
+
     if (dsDiv.length > 0) {
         $(window).scroll(loadDisqus);
     }

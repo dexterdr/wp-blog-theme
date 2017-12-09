@@ -88,6 +88,11 @@ header.top {
     height: auto;
 }
 
+.popover {
+    border-color: #ddd;
+    border-radius: 0;
+}
+
 /* END OF BOOTSTRAP */
 
 /* LINKS */
@@ -98,6 +103,18 @@ a { color: #3366cc; }
 .card-footer a {
     color: #000;
     font-weight: normal;
+}
+
+a[data-toggle="popover"] {
+    border-bottom: 1px dashed #3366cc;
+    color:  #000;
+    cursor: pointer;
+}
+
+a[data-toggle="popover"]:hover {
+    border-color: #0056b3;
+    color: #0056b3;
+    text-decoration: none;
 }
 
 /* END OF LINKS */
